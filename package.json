@@ -2,8 +2,24 @@
   "name": "ods2-cli",
   "version": "0.0.1",
   "description": "cli ods file parser to json",
-  "main": "index.js",
   "author": "Costas Ioannou",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "main": "./dist/index.js",
+  "bin": {
+    "ods2-cli": "./dist/index.js"
+  },
+  "scripts": {
+    "watch": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "start": "ts-node src/index.ts",
+    "build": "tsc -p ."
+  },
+  "devDependencies": {
+    "nodemon": "2.0.2",
+    "ts-node": "8.8.2",
+    "typescript": "3.8.3"
+  },
+  "dependencies": {
+    "@types/node": "13.11.0"
+  }
 }
