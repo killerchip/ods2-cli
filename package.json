@@ -1,25 +1,42 @@
 {
-  "name": "ods2-cli",
-  "version": "0.0.1",
-  "description": "cli ods file parser to json",
-  "author": "Costas Ioannou",
-  "license": "MIT",
-  "private": false,
-  "main": "./dist/index.js",
-  "bin": {
-    "ods2-cli": "./dist/index.js"
-  },
-  "scripts": {
-    "watch": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
-    "start": "ts-node src/index.ts",
-    "build": "tsc -p ."
-  },
-  "devDependencies": {
-    "nodemon": "2.0.2",
-    "ts-node": "8.8.2",
-    "typescript": "3.8.3"
-  },
-  "dependencies": {
-    "@types/node": "13.11.0"
-  }
+    "name": "ods2-cli",
+    "version": "0.0.1",
+    "description": "cli ods file parser to json",
+    "author": "Costas Ioannou",
+    "license": "MIT",
+    "private": false,
+    "main": "./dist/index.js",
+    "bin": {
+        "ods2-cli": "./dist/index.js"
+    },
+    "scripts": {
+        "watch": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+        "start": "ts-node src/index.ts",
+        "build": "tsc -p .",
+        "lint": "tsc --noEmit && eslint . --ext .js,.jsx,.ts,.tsx",
+        "pretty": "prettier --write '**/*.{js,ts}'"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "2.26.0",
+        "@typescript-eslint/parser": "2.26.0",
+        "eslint": "6.8.0",
+        "eslint-config-airbnb-typescript": "7.2.0",
+        "eslint-config-prettier": "6.10.1",
+        "eslint-plugin-import": "2.20.2",
+        "husky": "4.2.3",
+        "nodemon": "2.0.2",
+        "prettier": "2.0.4",
+        "pretty-quick": "2.0.1",
+        "ts-node": "8.8.2",
+        "typescript": "3.8.3"
+    },
+    "dependencies": {
+        "@types/node": "13.11.0"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "pretty-quick --staged",
+            "pre-push": "pretty-quick --staged && yarn lint"
+        }
+    }
 }
