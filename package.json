@@ -1,6 +1,6 @@
 {
     "name": "ods2-cli",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "cli ods file parser to json",
     "author": "Costas Ioannou",
     "license": "MIT",
