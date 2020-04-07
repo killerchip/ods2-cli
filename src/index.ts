@@ -1,2 +1,4 @@
-// eslint-disable-next-line no-console
-console.log('Hello world');
+import args from './cli';
+import convert from './convert';
+
+convert(args);

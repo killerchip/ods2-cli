@@ -1,6 +1,6 @@
 {
     "name": "ods2-cli",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "cli ods file parser to json",
     "author": "Costas Ioannou",
     "license": "MIT",
@@ -31,7 +31,11 @@
         "typescript": "3.8.3"
     },
     "dependencies": {
-        "@types/node": "13.11.0"
+        "@types/commander": "2.12.2",
+        "@types/node": "13.11.0",
+        "commander": "5.0.0",
+        "format-data": "2.1.2",
+        "spreadsheet-stream": "1.0.1"
     },
     "husky": {
         "hooks": {
