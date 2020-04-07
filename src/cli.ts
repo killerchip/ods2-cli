@@ -1,20 +1,5 @@
 import commander from 'commander';
-
-interface Config {
-    options: {
-        T?: string;
-        O?: string;
-        F?: boolean;
-    };
-    args: string[];
-}
-
-interface NormalizedConfig {
-    inputFile: string;
-    tab?: number | string;
-    output?: string;
-    format: { [key: string]: string };
-}
+import { Config, NormalizedConfig } from './types';
 
 const exitWithError = (message: string, errorCode = 1) => {
     // eslint-disable-next-line no-console

@@ -33,7 +33,9 @@
     "dependencies": {
         "@types/commander": "2.12.2",
         "@types/node": "13.11.0",
-        "commander": "5.0.0"
+        "commander": "5.0.0",
+        "format-data": "2.1.2",
+        "spreadsheet-stream": "1.0.1"
     },
     "husky": {
         "hooks": {

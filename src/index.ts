@@ -1,3 +1,4 @@
 import args from './cli';
+import convert from './convert';
 
-console.log(args);
+convert(args);
